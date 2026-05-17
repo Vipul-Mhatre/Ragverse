@@ -1,0 +1,64 @@
+import json
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+OUTPUT = REPO_ROOT / "data" / "sample_enterprise_dataset.json"
+
+
+def generate() -> None:
+    docs = [
+        {
+            "document_id": "doc-pdf-001",
+            "chunk_id": "c1",
+            "source": "pdf",
+            "content": "HR policy for remote onboarding requires MFA and manager signoff.",
+            "metadata": {"department": "HR", "classification": "internal"},
+            "allowed_roles": ["admin", "analyst", "guest"],
+        },
+        {
+            "document_id": "doc-csv-001",
+            "chunk_id": "c2",
+            "source": "csv",
+            "content": "Quarterly hiring metrics: engineering offers accepted up by 12 percent.",
+            "metadata": {"department": "Talent", "classification": "internal"},
+            "allowed_roles": ["admin", "analyst"],
+        },
+        {
+            "document_id": "doc-json-001",
+            "chunk_id": "c3",
+            "source": "json",
+            "content": "Incident log: api latency crossed 450ms on service payments.",
+            "metadata": {"department": "SRE", "classification": "internal"},
+            "allowed_roles": ["admin", "analyst"],
+        },
+        {
+            "document_id": "doc-sql-001",
+            "chunk_id": "c4",
+            "source": "sql",
+            "content": "Database snapshot indicates SLA breach count is 2 for week 19.",
+            "metadata": {"department": "SRE", "classification": "restricted"},
+            "allowed_roles": ["admin"],
+        },
+        {
+            "document_id": "doc-comp-001",
+            "chunk_id": "c5",
+            "source": "compliance",
+            "content": "SOX control AC-17 mandates quarterly access review approval evidence.",
+            "metadata": {"department": "Compliance", "classification": "restricted"},
+            "allowed_roles": ["admin"],
+        },
+        {
+            "document_id": "doc-ops-001",
+            "chunk_id": "c6",
+            "source": "operations",
+            "content": "Ops runbook says rollback threshold is 5 percent error rate for 10 minutes.",
+            "metadata": {"department": "SRE", "classification": "internal"},
+            "allowed_roles": ["admin", "analyst"],
+        },
+    ]
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT.write_text(json.dumps(docs, indent=2), encoding="utf-8")
+
+
+if __name__ == "__main__":
+    generate()

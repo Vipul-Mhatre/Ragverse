@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ragverse-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ragverse-backend
+  template:
+    metadata:
+      labels:
+        app: ragverse-backend
+    spec:
+      containers:
+        - name: backend
+          image: ragverse/backend:latest
+          ports:
+            - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ragverse-backend
+spec:
+  selector:
+    app: ragverse-backend
+  ports:
+    - port: 80
+      targetPort: 8000
