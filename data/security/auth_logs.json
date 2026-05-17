@@ -1,0 +1,45 @@
+[
+  {
+    "timestamp": "2026-04-14T23:55:12Z",
+    "user": "svc-payroll",
+    "action": "payroll_update",
+    "status": "success",
+    "ip": "10.14.22.18",
+    "system": "hr-payroll",
+    "change_ticket": "CHG-4812"
+  },
+  {
+    "timestamp": "2026-04-15T00:02:41Z",
+    "user": "admin.ops",
+    "action": "login",
+    "status": "failed",
+    "ip": "198.51.100.23",
+    "system": "identity",
+    "reason": "mfa_timeout"
+  },
+  {
+    "timestamp": "2026-04-15T00:03:19Z",
+    "user": "admin.ops",
+    "action": "login",
+    "status": "failed",
+    "ip": "198.51.100.23",
+    "system": "identity",
+    "reason": "invalid_token"
+  },
+  {
+    "timestamp": "2026-04-15T00:08:07Z",
+    "user": "carol",
+    "action": "login",
+    "status": "success",
+    "ip": "203.0.113.44",
+    "system": "finance-portal"
+  },
+  {
+    "timestamp": "2026-04-15T00:12:30Z",
+    "user": "svc-payroll",
+    "action": "payroll_validation",
+    "status": "success",
+    "ip": "10.14.22.18",
+    "system": "hr-payroll"
+  }
+]

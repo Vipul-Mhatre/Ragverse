@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="200">
+  <rect width="100%" height="100%" fill="#eef2ff" stroke="#c7d2fe" />
+  <text x="24" y="48" font-family="Arial" font-size="20" fill="#1e1b4b">Cross-source Demo</text>
+  <text x="24" y="86" font-family="Arial" font-size="14" fill="#312e81">User: Diana (Admin)</text>
+  <text x="24" y="116" font-family="Arial" font-size="14" fill="#312e81">Query: Were failed admin logins associated with payroll updates?</text>
+  <text x="24" y="146" font-family="Arial" font-size="14" fill="#4f46e5">Sources: HR + Security • Confidence 0.9</text>
+</svg>

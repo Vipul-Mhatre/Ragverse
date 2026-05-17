@@ -4,6 +4,11 @@ INJECTION_PATTERNS = [
     r"ignore\s+all\s+previous\s+instructions",
     r"reveal\s+system\s+prompt",
     r"bypass\s+security",
+    r"show\s+hidden\s+data",
+    r"disclose\s+admin",
+    r"developer\s+instructions",
+    r"system\s+prompt",
+    r"exfiltrate",
 ]
 
 
