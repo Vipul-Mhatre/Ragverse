@@ -1,0 +1,25 @@
+API Architecture Overview
+
+System Topology:
+The platform is composed of three core services: identity, retrieval, and analytics. Requests enter through the API gateway, which performs token validation and RBAC enforcement before routing to downstream services.
+
+Service Boundaries:
+1. Identity Service
+   - Handles JWT issuance and token introspection
+   - Enforces session expiration and role claims
+
+2. Retrieval Service
+   - Runs hybrid retrieval using vector similarity and BM25
+   - Reranks top candidates before sending to the LLM layer
+
+3. Analytics Service
+   - Stores audit logs and retrieval traces
+   - Generates operational dashboards for compliance
+
+Availability Targets:
+- Gateway SLO: 99.95%
+- Retrieval SLO: 99.9%
+- Analytics SLO: 99.5%
+
+Deployment Notes:
+The API gateway runs in a multi-region active-active setup with read-only data caches in each region.

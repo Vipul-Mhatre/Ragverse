@@ -1,0 +1,18 @@
+GDPR Audit Report - Q2 2026
+
+Scope:
+This audit reviewed data processing, retention, and access controls for HR, Finance, and Security data sets.
+
+Key Findings:
+- Data minimization controls are effective for HR systems.
+- Finance systems require quarterly access recertification evidence.
+- Security logs are retained for 18 months and meet audit requirements.
+
+Risk Items:
+1. Missing access review evidence for two finance managers.
+2. Manual payroll exports were not tagged with classification metadata.
+
+Recommendations:
+- Enforce metadata tagging at ingestion.
+- Require RBAC review for finance and HR data every quarter.
+- Continue MFA enforcement and prompt-injection detection for AI systems.

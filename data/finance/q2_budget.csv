@@ -1,0 +1,6 @@
+department,planned_spend_usd,actual_spend_usd,risk_notes
+HR,1200000,1185000,On track; payroll increases absorbed
+Engineering,4200000,4475000,Infrastructure spend 6% over plan
+Security,900000,980000,Additional MFA rollout increased costs
+Compliance,600000,590000,On track; audit costs stabilized
+Revenue,9500000,9100000,Q2 renewals delayed in EMEA

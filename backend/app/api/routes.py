@@ -1,9 +1,10 @@
 from fastapi import APIRouter, Depends, Header, HTTPException
+from fastapi.responses import JSONResponse
 
 from app.core.sanitization import has_prompt_injection, sanitize_query
 from app.core.security import create_access_token, decode_token
 from app.models.schemas import QueryRequest, QueryResponse, RetrievalChunk, TokenResponse
-from app.services.audit_service import audit_log
+from app.services.audit_service import audit_log, audit_query_event
 from app.services.auth_service import authenticate
 from app.services.intent_classifier import classify_intent
 from app.services.llm_service import generate_answer
@@ -38,7 +39,7 @@ async def token(username: str) -> TokenResponse:
         raise HTTPException(status_code=401, detail="Invalid user")
     access_token = create_access_token(subject=user.username, role=user.role)
     audit_log("auth.token_issued", user.username, f"role={user.role}")
-    return TokenResponse(access_token=access_token)
+    return TokenResponse(access_token=access_token, username=user.username, role=user.role)
 
 
 @router.post("/query", response_model=QueryResponse)
@@ -52,7 +53,7 @@ async def query(payload: QueryRequest, user: dict = Depends(auth_context)) -> Qu
     intent = classify_intent(clean_query)
     routed_sources = route_sources(intent)
 
-    retrieved, traces, attribution = await retrieval_service.retrieve(
+    retrieved, traces, attribution, blocked_sources, governance = await retrieval_service.retrieve(
         query=clean_query,
         docs=documents,
         role=user["role"],
@@ -60,13 +61,39 @@ async def query(payload: QueryRequest, user: dict = Depends(auth_context)) -> Qu
         top_k=5,
     )
 
-    answer, confidence = await generate_answer(clean_query, retrieved)
+    if not retrieved and blocked_sources:
+        audit_log("query.denied", user["username"], f"blocked_sources={blocked_sources}")
+        audit_query_event(
+            user=user["username"],
+            query=clean_query,
+            sources_accessed=[],
+            blocked_sources=blocked_sources,
+            confidence=0.0,
+            event="query.denied",
+        )
+        return JSONResponse(
+            status_code=403,
+            content={
+                "error": "ACCESS_DENIED",
+                "reason": "Insufficient role permissions",
+                "blocked_sources": blocked_sources,
+            },
+        )
+
+    answer, confidence, cross_source = await generate_answer(clean_query, retrieved)
     citations = [f"{chunk['document_id']}#{chunk['chunk_id']}" for chunk in retrieved]
 
     audit_log(
         "query.completed",
         user["username"],
         f"intent={intent} retrieved={len(retrieved)} role={user['role']}",
+    )
+    audit_query_event(
+        user=user["username"],
+        query=clean_query,
+        sources_accessed=sorted({chunk["source"] for chunk in retrieved}),
+        blocked_sources=blocked_sources,
+        confidence=confidence,
     )
 
     return QueryResponse(
@@ -75,13 +102,16 @@ async def query(payload: QueryRequest, user: dict = Depends(auth_context)) -> Qu
         citations=citations,
         retrieval_trace=traces,
         source_attribution=attribution,
+        blocked_sources=blocked_sources,
+        governance=governance,
+        cross_source=cross_source,
         retrieved_chunks=[
             RetrievalChunk(
                 chunk_id=chunk["chunk_id"],
                 document_id=chunk["document_id"],
                 source=chunk["source"],
                 content=chunk["content"],
-                score=float(chunk.get("score", 0.0)),
+                score=float(chunk.get("rerank_score", chunk.get("score", 0.0))),
             )
             for chunk in retrieved
         ],

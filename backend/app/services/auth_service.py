@@ -8,9 +8,10 @@ class User:
 
 
 USERS: dict[str, User] = {
-    "alice": User(username="alice", role="admin"),
-    "bob": User(username="bob", role="analyst"),
-    "eve": User(username="eve", role="guest"),
+    "alice": User(username="alice", role="hr_manager"),
+    "bob": User(username="bob", role="engineering_manager"),
+    "carol": User(username="carol", role="finance_manager"),
+    "diana": User(username="diana", role="admin"),
 }
 
 

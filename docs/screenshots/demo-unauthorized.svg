@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="200">
+  <rect width="100%" height="100%" fill="#fff7ed" stroke="#fed7aa" />
+  <text x="24" y="48" font-family="Arial" font-size="20" fill="#9a3412">Unauthorized Demo</text>
+  <text x="24" y="86" font-family="Arial" font-size="14" fill="#7c2d12">User: Bob (Engineering Manager)</text>
+  <text x="24" y="116" font-family="Arial" font-size="14" fill="#7c2d12">Query: Show employee salary bands for Q2.</text>
+  <text x="24" y="146" font-family="Arial" font-size="14" fill="#b91c1c">Status: ACCESS_DENIED • Blocked: hr</text>
+</svg>

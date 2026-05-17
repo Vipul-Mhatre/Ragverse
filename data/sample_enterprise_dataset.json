@@ -1,85 +1,476 @@
 [
   {
-    "document_id": "doc-pdf-001",
-    "chunk_id": "c1",
-    "source": "pdf",
-    "content": "HR policy for remote onboarding requires MFA and manager signoff.",
+    "document_id": "hr-payroll-policy-2026",
+    "chunk_id": "hr-payroll-policy-2026-c1",
+    "source": "hr",
+    "content": "Payroll Policy 2026",
     "metadata": {
-      "department": "HR",
-      "classification": "internal"
+      "source": "hr",
+      "classification": "confidential",
+      "allowed_roles": [
+        "hr_analyst",
+        "hr_manager",
+        "finance_manager",
+        "admin"
+      ],
+      "document_id": "hr-payroll-policy-2026"
     },
     "allowed_roles": [
-      "admin",
-      "analyst",
-      "guest"
-    ]
-  },
-  {
-    "document_id": "doc-csv-001",
-    "chunk_id": "c2",
-    "source": "csv",
-    "content": "Quarterly hiring metrics: engineering offers accepted up by 12 percent.",
-    "metadata": {
-      "department": "Talent",
-      "classification": "internal"
-    },
-    "allowed_roles": [
-      "admin",
-      "analyst"
-    ]
-  },
-  {
-    "document_id": "doc-json-001",
-    "chunk_id": "c3",
-    "source": "json",
-    "content": "Incident log: api latency crossed 450ms on service payments.",
-    "metadata": {
-      "department": "SRE",
-      "classification": "internal"
-    },
-    "allowed_roles": [
-      "admin",
-      "analyst"
-    ]
-  },
-  {
-    "document_id": "doc-sql-001",
-    "chunk_id": "c4",
-    "source": "sql",
-    "content": "Database snapshot indicates SLA breach count is 2 for week 19.",
-    "metadata": {
-      "department": "SRE",
-      "classification": "restricted"
-    },
-    "allowed_roles": [
+      "hr_analyst",
+      "hr_manager",
+      "finance_manager",
       "admin"
     ]
   },
   {
-    "document_id": "doc-comp-001",
-    "chunk_id": "c5",
+    "document_id": "hr-payroll-policy-2026",
+    "chunk_id": "hr-payroll-policy-2026-c2",
+    "source": "hr",
+    "content": "Overview: Ragverse HR maintains payroll policies for all full-time employees, including salary bands, bonus eligibility, and payroll update controls. Payroll changes require dual approval from HR and Finance.",
+    "metadata": {
+      "source": "hr",
+      "classification": "confidential",
+      "allowed_roles": [
+        "hr_analyst",
+        "hr_manager",
+        "finance_manager",
+        "admin"
+      ],
+      "document_id": "hr-payroll-policy-2026"
+    },
+    "allowed_roles": [
+      "hr_analyst",
+      "hr_manager",
+      "finance_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "hr-payroll-policy-2026",
+    "chunk_id": "hr-payroll-policy-2026-c3",
+    "source": "hr",
+    "content": "Payroll Update Window: - Standard processing window: 14th\u201318th of each month - Off-cycle updates require VP approval and a documented change request",
+    "metadata": {
+      "source": "hr",
+      "classification": "confidential",
+      "allowed_roles": [
+        "hr_analyst",
+        "hr_manager",
+        "finance_manager",
+        "admin"
+      ],
+      "document_id": "hr-payroll-policy-2026"
+    },
+    "allowed_roles": [
+      "hr_analyst",
+      "hr_manager",
+      "finance_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "hr-payroll-policy-2026",
+    "chunk_id": "hr-payroll-policy-2026-c4",
+    "source": "hr",
+    "content": "Salary Bands (Confidential): - Associate: $70k\u2013$95k - Senior: $96k\u2013$135k - Staff: $136k\u2013$185k",
+    "metadata": {
+      "source": "hr",
+      "classification": "confidential",
+      "allowed_roles": [
+        "hr_analyst",
+        "hr_manager",
+        "finance_manager",
+        "admin"
+      ],
+      "document_id": "hr-payroll-policy-2026"
+    },
+    "allowed_roles": [
+      "hr_analyst",
+      "hr_manager",
+      "finance_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "hr-payroll-policy-2026",
+    "chunk_id": "hr-payroll-policy-2026-c5",
+    "source": "hr",
+    "content": "Access Controls: - Payroll data is restricted to HR and Finance leadership - HR analysts can view salary band guidance but not individual compensation - Audit logs are retained for 7 years",
+    "metadata": {
+      "source": "hr",
+      "classification": "confidential",
+      "allowed_roles": [
+        "hr_analyst",
+        "hr_manager",
+        "finance_manager",
+        "admin"
+      ],
+      "document_id": "hr-payroll-policy-2026"
+    },
+    "allowed_roles": [
+      "hr_analyst",
+      "hr_manager",
+      "finance_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "hr-payroll-policy-2026",
+    "chunk_id": "hr-payroll-policy-2026-c6",
+    "source": "hr",
+    "content": "Change Management: All payroll adjustments must reference a change ticket ID and include justification, effective date, and approving manager.",
+    "metadata": {
+      "source": "hr",
+      "classification": "confidential",
+      "allowed_roles": [
+        "hr_analyst",
+        "hr_manager",
+        "finance_manager",
+        "admin"
+      ],
+      "document_id": "hr-payroll-policy-2026"
+    },
+    "allowed_roles": [
+      "hr_analyst",
+      "hr_manager",
+      "finance_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "finance-q2-budget-2026",
+    "chunk_id": "finance-q2-budget-2026-c1",
+    "source": "finance",
+    "content": "CSV Records: department=HR, planned_spend_usd=1200000, actual_spend_usd=1185000, risk_notes=On track; payroll increases absorbed department=Engineering, planned_spend_usd=4200000, actual_spend_usd=4475000, risk_notes=Infrastructure spend 6% over plan department=Security, planned_spend_usd=900000, actual_spend_usd=980000, risk_notes=Additional MFA rollout increased costs department=Compliance, planned_spend_usd=600000, actual_spend_usd=590000, risk_notes=On track; audit costs stabilized",
+    "metadata": {
+      "source": "finance",
+      "classification": "confidential",
+      "allowed_roles": [
+        "finance_analyst",
+        "finance_manager",
+        "admin"
+      ],
+      "document_id": "finance-q2-budget-2026"
+    },
+    "allowed_roles": [
+      "finance_analyst",
+      "finance_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "finance-q2-budget-2026",
+    "chunk_id": "finance-q2-budget-2026-c2",
+    "source": "finance",
+    "content": "planned_spend_usd=600000, actual_spend_usd=590000, risk_notes=On track; audit costs stabilized department=Revenue, planned_spend_usd=9500000, actual_spend_usd=9100000, risk_notes=Q2 renewals delayed in EMEA",
+    "metadata": {
+      "source": "finance",
+      "classification": "confidential",
+      "allowed_roles": [
+        "finance_analyst",
+        "finance_manager",
+        "admin"
+      ],
+      "document_id": "finance-q2-budget-2026"
+    },
+    "allowed_roles": [
+      "finance_analyst",
+      "finance_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "eng-api-architecture-2026",
+    "chunk_id": "eng-api-architecture-2026-c1",
+    "source": "engineering",
+    "content": "API Architecture Overview",
+    "metadata": {
+      "source": "engineering",
+      "classification": "internal",
+      "allowed_roles": [
+        "engineering_analyst",
+        "engineering_manager",
+        "admin"
+      ],
+      "document_id": "eng-api-architecture-2026"
+    },
+    "allowed_roles": [
+      "engineering_analyst",
+      "engineering_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "eng-api-architecture-2026",
+    "chunk_id": "eng-api-architecture-2026-c2",
+    "source": "engineering",
+    "content": "System Topology: The platform is composed of three core services: identity, retrieval, and analytics. Requests enter through the API gateway, which performs token validation and RBAC enforcement before routing to downstream services.",
+    "metadata": {
+      "source": "engineering",
+      "classification": "internal",
+      "allowed_roles": [
+        "engineering_analyst",
+        "engineering_manager",
+        "admin"
+      ],
+      "document_id": "eng-api-architecture-2026"
+    },
+    "allowed_roles": [
+      "engineering_analyst",
+      "engineering_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "eng-api-architecture-2026",
+    "chunk_id": "eng-api-architecture-2026-c3",
+    "source": "engineering",
+    "content": "Service Boundaries: 1. Identity Service - Handles JWT issuance and token introspection - Enforces session expiration and role claims",
+    "metadata": {
+      "source": "engineering",
+      "classification": "internal",
+      "allowed_roles": [
+        "engineering_analyst",
+        "engineering_manager",
+        "admin"
+      ],
+      "document_id": "eng-api-architecture-2026"
+    },
+    "allowed_roles": [
+      "engineering_analyst",
+      "engineering_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "eng-api-architecture-2026",
+    "chunk_id": "eng-api-architecture-2026-c4",
+    "source": "engineering",
+    "content": "2. Retrieval Service - Runs hybrid retrieval using vector similarity and BM25 - Reranks top candidates before sending to the LLM layer",
+    "metadata": {
+      "source": "engineering",
+      "classification": "internal",
+      "allowed_roles": [
+        "engineering_analyst",
+        "engineering_manager",
+        "admin"
+      ],
+      "document_id": "eng-api-architecture-2026"
+    },
+    "allowed_roles": [
+      "engineering_analyst",
+      "engineering_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "eng-api-architecture-2026",
+    "chunk_id": "eng-api-architecture-2026-c5",
+    "source": "engineering",
+    "content": "3. Analytics Service - Stores audit logs and retrieval traces - Generates operational dashboards for compliance",
+    "metadata": {
+      "source": "engineering",
+      "classification": "internal",
+      "allowed_roles": [
+        "engineering_analyst",
+        "engineering_manager",
+        "admin"
+      ],
+      "document_id": "eng-api-architecture-2026"
+    },
+    "allowed_roles": [
+      "engineering_analyst",
+      "engineering_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "eng-api-architecture-2026",
+    "chunk_id": "eng-api-architecture-2026-c6",
+    "source": "engineering",
+    "content": "Availability Targets: - Gateway SLO: 99.95% - Retrieval SLO: 99.9% - Analytics SLO: 99.5%",
+    "metadata": {
+      "source": "engineering",
+      "classification": "internal",
+      "allowed_roles": [
+        "engineering_analyst",
+        "engineering_manager",
+        "admin"
+      ],
+      "document_id": "eng-api-architecture-2026"
+    },
+    "allowed_roles": [
+      "engineering_analyst",
+      "engineering_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "eng-api-architecture-2026",
+    "chunk_id": "eng-api-architecture-2026-c7",
+    "source": "engineering",
+    "content": "Deployment Notes: The API gateway runs in a multi-region active-active setup with read-only data caches in each region.",
+    "metadata": {
+      "source": "engineering",
+      "classification": "internal",
+      "allowed_roles": [
+        "engineering_analyst",
+        "engineering_manager",
+        "admin"
+      ],
+      "document_id": "eng-api-architecture-2026"
+    },
+    "allowed_roles": [
+      "engineering_analyst",
+      "engineering_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "security-auth-logs-2026",
+    "chunk_id": "security-auth-logs-2026-c1",
+    "source": "security",
+    "content": "JSON Records: timestamp=2026-04-14T23:55:12Z, user=svc-payroll, action=payroll_update, status=success, ip=10.14.22.18, system=hr-payroll, change_ticket=CHG-4812 timestamp=2026-04-15T00:02:41Z, user=admin.ops, action=login, status=failed, ip=198.51.100.23, system=identity, reason=mfa_timeout timestamp=2026-04-15T00:03:19Z, user=admin.ops, action=login, status=failed, ip=198.51.100.23, system=identity, reason=invalid_token timestamp=2026-04-15T00:08:07Z, user=carol, action=login, status=success,",
+    "metadata": {
+      "source": "security",
+      "classification": "restricted",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "admin"
+      ],
+      "document_id": "security-auth-logs-2026"
+    },
+    "allowed_roles": [
+      "security_analyst",
+      "security_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "security-auth-logs-2026",
+    "chunk_id": "security-auth-logs-2026-c2",
+    "source": "security",
+    "content": "reason=invalid_token timestamp=2026-04-15T00:08:07Z, user=carol, action=login, status=success, ip=203.0.113.44, system=finance-portal timestamp=2026-04-15T00:12:30Z, user=svc-payroll, action=payroll_validation, status=success, ip=10.14.22.18, system=hr-payroll",
+    "metadata": {
+      "source": "security",
+      "classification": "restricted",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "admin"
+      ],
+      "document_id": "security-auth-logs-2026"
+    },
+    "allowed_roles": [
+      "security_analyst",
+      "security_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "compliance-gdpr-audit-q2-2026",
+    "chunk_id": "compliance-gdpr-audit-q2-2026-c1",
     "source": "compliance",
-    "content": "SOX control AC-17 mandates quarterly access review approval evidence.",
+    "content": "GDPR Audit Report - Q2 2026",
     "metadata": {
-      "department": "Compliance",
-      "classification": "restricted"
+      "source": "compliance",
+      "classification": "restricted",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "admin"
+      ],
+      "document_id": "compliance-gdpr-audit-q2-2026"
     },
     "allowed_roles": [
+      "compliance_analyst",
+      "compliance_manager",
       "admin"
     ]
   },
   {
-    "document_id": "doc-ops-001",
-    "chunk_id": "c6",
-    "source": "operations",
-    "content": "Ops runbook says rollback threshold is 5 percent error rate for 10 minutes.",
+    "document_id": "compliance-gdpr-audit-q2-2026",
+    "chunk_id": "compliance-gdpr-audit-q2-2026-c2",
+    "source": "compliance",
+    "content": "Scope: This audit reviewed data processing, retention, and access controls for HR, Finance, and Security data sets.",
     "metadata": {
-      "department": "SRE",
-      "classification": "internal"
+      "source": "compliance",
+      "classification": "restricted",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "admin"
+      ],
+      "document_id": "compliance-gdpr-audit-q2-2026"
     },
     "allowed_roles": [
-      "admin",
-      "analyst"
+      "compliance_analyst",
+      "compliance_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "compliance-gdpr-audit-q2-2026",
+    "chunk_id": "compliance-gdpr-audit-q2-2026-c3",
+    "source": "compliance",
+    "content": "Key Findings: - Data minimization controls are effective for HR systems. - Finance systems require quarterly access recertification evidence. - Security logs are retained for 18 months and meet audit requirements.",
+    "metadata": {
+      "source": "compliance",
+      "classification": "restricted",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "admin"
+      ],
+      "document_id": "compliance-gdpr-audit-q2-2026"
+    },
+    "allowed_roles": [
+      "compliance_analyst",
+      "compliance_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "compliance-gdpr-audit-q2-2026",
+    "chunk_id": "compliance-gdpr-audit-q2-2026-c4",
+    "source": "compliance",
+    "content": "Risk Items: 1. Missing access review evidence for two finance managers. 2. Manual payroll exports were not tagged with classification metadata.",
+    "metadata": {
+      "source": "compliance",
+      "classification": "restricted",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "admin"
+      ],
+      "document_id": "compliance-gdpr-audit-q2-2026"
+    },
+    "allowed_roles": [
+      "compliance_analyst",
+      "compliance_manager",
+      "admin"
+    ]
+  },
+  {
+    "document_id": "compliance-gdpr-audit-q2-2026",
+    "chunk_id": "compliance-gdpr-audit-q2-2026-c5",
+    "source": "compliance",
+    "content": "Recommendations: - Enforce metadata tagging at ingestion. - Require RBAC review for finance and HR data every quarter. - Continue MFA enforcement and prompt-injection detection for AI systems.",
+    "metadata": {
+      "source": "compliance",
+      "classification": "restricted",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "admin"
+      ],
+      "document_id": "compliance-gdpr-audit-q2-2026"
+    },
+    "allowed_roles": [
+      "compliance_analyst",
+      "compliance_manager",
+      "admin"
     ]
   }
 ]

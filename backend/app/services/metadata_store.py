@@ -25,11 +25,9 @@ class MetadataStore:
                 """
             )
             await db.commit()
-
-            cur = await db.execute("SELECT COUNT(1) FROM document_chunks")
-            count = (await cur.fetchone())[0]
-            if count == 0 and SEED_PATH.exists():
+            if SEED_PATH.exists():
                 records = json.loads(SEED_PATH.read_text(encoding="utf-8"))
+                await db.execute("DELETE FROM document_chunks")
                 await db.executemany(
                     """
                     INSERT INTO document_chunks (chunk_id, document_id, source, content, metadata_json, allowed_roles_json)
